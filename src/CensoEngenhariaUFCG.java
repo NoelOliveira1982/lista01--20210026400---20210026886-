@@ -41,14 +41,14 @@ public class CensoEngenhariaUFCG {
             }
 
             System.out.println(
-                    "A porcentagem de alunos que passaram foi: " + (listAlunos.size() / quantidadeAlunos) * 100 + "%");
+                    "A porcentagem de alunos que passaram foi: " + (listAlunos.size() * 100) / quantidadeAlunos + "%");
             System.out.println("A porcentagem de alunos do sexo M que passaram foi: "
                     + (listAlunos.stream().filter(aluno -> aluno.getSexo() == 'm' || aluno.getSexo() == 'M')
-                            .toArray().length / quantidadeAlunos) * 100
+                            .toArray().length * 100) / quantidadeAlunos
                     + "%");
             System.out.println("A porcentagem de alunos que prestaram, no mínimo, três vestibulares foi: " + (listAlunos
-                    .stream().filter(aluno -> aluno.getQuantidadeVestibularesPrestados() >= 3).toArray().length
-                    / quantidadeAlunos) * 100 + "%");
+                    .stream().filter(aluno -> aluno.getQuantidadeVestibularesPrestados() >= 3).toArray().length * 100)
+                    / quantidadeAlunos + "%");
         }
     }
 }
