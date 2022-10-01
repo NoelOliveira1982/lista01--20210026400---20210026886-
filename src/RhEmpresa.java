@@ -33,7 +33,7 @@ public class RhEmpresa {
             } while (quantidadeFuncionarios >= 80);
 
             for (int i = 0; i < quantidadeFuncionarios; i++) {
-                System.out.println("Informe o nome: ");
+                System.out.println("Informe o primeiro nome: ");
                 String nomeAux = sc.next();
                 System.out.println("Digite o salário: ");
                 double salarioAux = sc.nextDouble();
@@ -44,10 +44,10 @@ public class RhEmpresa {
             Funcionario funcionarioComMaiorSalario = listFuncionarios.stream()
                     .max(Comparator.comparing(Funcionario::getSalario)).get();
 
-            System.out.printf("Maior salário: %.2f", funcionarioComMaiorSalario.getSalario());
+            System.out.printf("Maior salário: %.2f\n", funcionarioComMaiorSalario.getSalario());
             System.out.println("Nome de todos os funcionários com o maior salário: " + listFuncionarios.stream()
                     .filter(funcionario -> funcionario.getSalario() == funcionarioComMaiorSalario.getSalario())
-                    .reduce("", (funcionarioString, funcionario) -> funcionarioString + ", " + funcionario.getNome(),
+                    .reduce("", (funcionarioString, funcionario) -> funcionarioString + funcionario.getNome() + ", ",
                             String::concat));
 
         }
