@@ -1,3 +1,8 @@
+/* Exercício  8:
+ * Aluno: Pedro Augusto Dias de Lima             - Matrícula: 20210026400 
+ * Aluno: Jorge Alberto Macedo Costa de Oliveira - Matrícula: 20210026886
+ */
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
