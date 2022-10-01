@@ -1,3 +1,8 @@
+/* Exercício  9:
+ * Aluno: Pedro Augusto Dias de Lima             - Matrícula: 20210026400 
+ * Aluno: Jorge Alberto Macedo Costa de Oliveira - Matrícula: 20210026886
+ */
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Scanner;
@@ -34,7 +39,8 @@ public class RhEmpresa {
 
             for (int i = 0; i < quantidadeFuncionarios; i++) {
                 System.out.println("Informe o primeiro nome: ");
-                String nomeAux = sc.next();
+                sc.nextLine();
+                String nomeAux = sc.nextLine();
                 System.out.println("Digite o salário: ");
                 double salarioAux = sc.nextDouble();
 
